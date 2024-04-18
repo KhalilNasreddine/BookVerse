@@ -30,7 +30,7 @@ class _RegisterState extends State<Register> {
                 const Center(
                   child: CircleAvatar(
                     radius: 100,
-                    backgroundImage: AssetImage('images/logo.png'),
+                    backgroundImage: AssetImage('assets/images/logo.png'),
                   ),
                 ),
                 const SizedBox(height: 30),

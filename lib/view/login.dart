@@ -10,8 +10,8 @@ class LogIn extends StatefulWidget {
 class _LogInState extends State<LogIn> {
   TextEditingController email=TextEditingController();
   TextEditingController password= TextEditingController();
-  GlobalKey<FormState> _formkey=GlobalKey<FormState>();
-  GlobalKey<FormState> _formkey1=GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey=GlobalKey<FormState>();
+  final GlobalKey<FormState> _formKey1=GlobalKey<FormState>();
   bool isLoading =false;
   @override
   Widget build(BuildContext context) {
@@ -20,60 +20,60 @@ class _LogInState extends State<LogIn> {
           title:const Text("Log In Page", style:TextStyle(fontSize: 25, color:Colors.deepPurple)),
           centerTitle: true,
         ),
-        body:  isLoading?Center(
+        body:  isLoading?const Center(
           child: CircularProgressIndicator(),)
             :ListView(
           children: [
             Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                SizedBox(height: 20),
-                Center(
+                const SizedBox(height: 20),
+                const Center(
                   child: CircleAvatar(
                     radius: 100,
-                    backgroundImage: AssetImage("images/logo.png"),
+                    backgroundImage: AssetImage("assets/images/logo.png"),
                   ),
                 ),
-                SizedBox(height: 30),
+                const SizedBox(height: 30),
                 Form(
-                  key: _formkey,
+                  key: _formKey,
                   child:Padding(
-                    padding: EdgeInsets.all(30),
+                    padding: const EdgeInsets.all(30),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
+                        const Text(
                           "Login",
                           style: TextStyle(fontSize: 30, color: Colors.black, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 8),
-                        Text(
+                        const SizedBox(height: 8),
+                        const Text(
                           "Login to continue using the app",
                           style: TextStyle(fontSize: 14, color: Colors.grey),
                         ),
-                        SizedBox(height: 20),
-                        Text(
+                        const SizedBox(height: 20),
+                        const Text(
                           "Email",
                           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         Form(
-                          key: _formkey1,
+                          key: _formKey1,
                           child: TextFormField(
                             controller: email,
                             decoration: InputDecoration(
                               hintText: "Enter your email",
-                              hintStyle: TextStyle(fontSize: 14, color: Colors.grey),
-                              contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 20),
+                              hintStyle: const TextStyle(fontSize: 14, color: Colors.grey),
+                              contentPadding: const EdgeInsets.symmetric(vertical: 2, horizontal: 20),
                               filled: true,
                               fillColor: Colors.grey[100],
                               border: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50),
-                                borderSide: BorderSide(color: Colors.grey),
+                                borderSide: const BorderSide(color: Colors.grey),
                               ),
                               enabledBorder: OutlineInputBorder(
                                 borderRadius: BorderRadius.circular(50),
-                                borderSide: BorderSide(color: Colors.grey),
+                                borderSide: const BorderSide(color: Colors.grey),
                               ),
                             ),
                             validator: (String? value) {
@@ -84,27 +84,27 @@ class _LogInState extends State<LogIn> {
                             },
                           ),
                         ),
-                        SizedBox(height: 10),
-                        Text(
+                        const SizedBox(height: 10),
+                        const Text(
                           "Password",
                           style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         TextFormField(
                           controller: password,
                           decoration: InputDecoration(
                             hintText: "Enter your password",
-                            hintStyle: TextStyle(fontSize: 14, color: Colors.grey),
-                            contentPadding: EdgeInsets.symmetric(vertical: 2, horizontal: 20),
+                            hintStyle: const TextStyle(fontSize: 14, color: Colors.grey),
+                            contentPadding: const EdgeInsets.symmetric(vertical: 2, horizontal: 20),
                             filled: true,
                             fillColor: Colors.grey[100],
                             border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(50),
-                              borderSide: BorderSide(color: Colors.grey),
+                              borderSide: const BorderSide(color: Colors.grey),
                             ),
                             enabledBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(50),
-                              borderSide: BorderSide(color: Colors.grey),
+                              borderSide: const BorderSide(color: Colors.grey),
                             ),
                           ),
                           validator: (String? value) {
@@ -114,12 +114,12 @@ class _LogInState extends State<LogIn> {
                             return null;
                           },
                         ),
-                        SizedBox(height: 10),
+                        const SizedBox(height: 10),
                         InkWell(
                           onTap: ()async {
 
                           },
-                          child: Align(
+                          child: const Align(
                             alignment: Alignment.centerRight,
                             child: Text(
                               "Forgot Password?",
@@ -127,7 +127,7 @@ class _LogInState extends State<LogIn> {
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
+                        const SizedBox(height: 20),
                         Row(
                           children: [
                             Expanded(
@@ -142,7 +142,7 @@ class _LogInState extends State<LogIn> {
                                       onPressed: ()async {
 
                                       },
-                                      child: Text("Log in"),
+                                      child: const Text("Log in"),
                                     ),
                                   ),
 
@@ -151,18 +151,18 @@ class _LogInState extends State<LogIn> {
                             ),
                           ],
                         ),
-                        SizedBox(height: 15,),
+                        const SizedBox(height: 15,),
                         //Text("Don't have an account", style: TextStyle(fontSize: 15),)
                         Align(
                           alignment: Alignment.center,
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
-                              Text("Don't have an account? "),
+                              const Text("Don't have an account? "),
                               InkWell(
                                 onTap:(){Navigator.pushReplacement(context,MaterialPageRoute(
                                     builder: (context) => const Register()),);},
-                                child: Text.rich(
+                                child: const Text.rich(
                                   TextSpan(
                                     text: "Register",
                                     style: TextStyle(color: Colors.deepPurple, fontWeight: FontWeight.bold),

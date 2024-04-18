@@ -20,7 +20,7 @@ class _HomeState extends State<Home> {
               SizedBox(height: 20,),
               CircleAvatar(
                 radius: 100, // Specify the desired radius of the circular avatar
-                backgroundImage:  AssetImage('images/logo.png'),
+                backgroundImage:  AssetImage('assets/images/logo.png'),
               ),
               SizedBox(height: 30,),
               Text("Welcome to the application,", style: TextStyle(fontSize: 18),),
