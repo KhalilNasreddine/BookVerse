@@ -14,47 +14,55 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child:Center(
-          child: Column(
-            children: [
-              SizedBox(height: 20,),
-              CircleAvatar(
-                radius: 100, // Specify the desired radius of the circular avatar
-                backgroundImage:  AssetImage('assets/images/logo.png'),
-              ),
-              SizedBox(height: 30,),
-              Text("Welcome to the application,", style: TextStyle(fontSize: 18),),
-              Text("Please  log in or sign up in order to continue using the app", style: TextStyle(fontSize: 18)),
-              SizedBox(height:30),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                    fixedSize: Size(250, 40)
+        child:Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+              image: AssetImage('assets/images/background.jpg'),
+              fit: BoxFit.cover,
+            )
+          ),
+          child:Center(
+            child: Column(
+              children: [
+                const SizedBox(height: 20,),
+                const CircleAvatar(
+                  radius: 100, // Specify the desired radius of the circular avatar
+                  backgroundImage:  AssetImage('assets/images/logo.png'),
                 ),
-                label: Text('Log In', style: TextStyle(fontSize: 18),),
-                onPressed:(){Navigator.push(context,MaterialPageRoute(
-                    builder: (context) => const LogIn()),);},
-                icon: Icon(Icons.login),
-              ),
-              Text("If you have an account already", style: TextStyle(fontSize: 10,)),
-              SizedBox(height: 10,),
-              Text("OR", style: TextStyle(fontSize:13)),
-              SizedBox(height: 10,),
-              ElevatedButton.icon(
-                style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                    fixedSize: Size(250, 40)
+                SizedBox(height: 30,),
+                Text("Welcome to the application,", style: TextStyle(fontSize: 18),),
+                Text("Please  log in or sign up in order to continue using the app", style: TextStyle(fontSize: 18)),
+                SizedBox(height:30),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                      fixedSize: Size(250, 40)
+                  ),
+                  label: Text('Log In', style: TextStyle(fontSize: 18),),
+                  onPressed:(){Navigator.push(context,MaterialPageRoute(
+                      builder: (context) => const LogIn()),);},
+                  icon: Icon(Icons.login),
                 ),
-                label: Text('Sign Up', style: TextStyle(fontSize: 18),),
-                onPressed:(){Navigator.push(context,MaterialPageRoute(
-                    builder: (context) => const Register()),);},
-                icon: Icon(Icons.how_to_reg),
-              ),
-              Text("If you are new", style: TextStyle(fontSize: 10),)
-            ],
+                Text("If you have an account already", style: TextStyle(fontSize: 10,)),
+                SizedBox(height: 10,),
+                Text("OR", style: TextStyle(fontSize:13)),
+                SizedBox(height: 10,),
+                ElevatedButton.icon(
+                  style: ElevatedButton.styleFrom(
+                      shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
+                      fixedSize: Size(250, 40)
+                  ),
+                  label: Text('Sign Up', style: TextStyle(fontSize: 18),),
+                  onPressed:(){Navigator.push(context,MaterialPageRoute(
+                      builder: (context) => const Register()),);},
+                  icon: Icon(Icons.how_to_reg),
+                ),
+                Text("If you are new", style: TextStyle(fontSize: 10),)
+              ],
+            ),
           ),
         ),
-      ),
+      )
     );
   }
 }
