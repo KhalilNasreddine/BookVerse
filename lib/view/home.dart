@@ -29,35 +29,35 @@ class _HomeState extends State<Home> {
                   radius: 100, // Specify the desired radius of the circular avatar
                   backgroundImage:  AssetImage('assets/images/logo.png'),
                 ),
-                SizedBox(height: 30,),
-                Text("Welcome to the application,", style: TextStyle(fontSize: 18),),
-                Text("Please  log in or sign up in order to continue using the app", style: TextStyle(fontSize: 18)),
-                SizedBox(height:30),
+                const SizedBox(height: 30,),
+                const Text("Welcome to the application,", style: TextStyle(fontSize: 18),),
+                const Text("Please  log in or sign up in order to continue using the app", style: TextStyle(fontSize: 18)),
+                const SizedBox(height:30),
                 ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                      fixedSize: Size(250, 40)
+                      fixedSize: const Size(250, 40)
                   ),
-                  label: Text('Log In', style: TextStyle(fontSize: 18),),
+                  label: const Text('Log In', style: TextStyle(fontSize: 18),),
                   onPressed:(){Navigator.push(context,MaterialPageRoute(
                       builder: (context) => const LogIn()),);},
-                  icon: Icon(Icons.login),
+                  icon: const Icon(Icons.login),
                 ),
-                Text("If you have an account already", style: TextStyle(fontSize: 10,)),
-                SizedBox(height: 10,),
-                Text("OR", style: TextStyle(fontSize:13)),
-                SizedBox(height: 10,),
+                const Text("If you have an account already", style: TextStyle(fontSize: 10,)),
+                const SizedBox(height: 10,),
+                const Text("OR", style: TextStyle(fontSize:13)),
+                const SizedBox(height: 10,),
                 ElevatedButton.icon(
                   style: ElevatedButton.styleFrom(
                       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(30)),
-                      fixedSize: Size(250, 40)
+                      fixedSize: const Size(250, 40)
                   ),
-                  label: Text('Sign Up', style: TextStyle(fontSize: 18),),
+                  label: const Text('Sign Up', style: TextStyle(fontSize: 18),),
                   onPressed:(){Navigator.push(context,MaterialPageRoute(
                       builder: (context) => const Register()),);},
-                  icon: Icon(Icons.how_to_reg),
+                  icon: const Icon(Icons.how_to_reg),
                 ),
-                Text("If you are new", style: TextStyle(fontSize: 10),)
+                const Text("If you are new", style: TextStyle(fontSize: 10),)
               ],
             ),
           ),
